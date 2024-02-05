@@ -1,9 +1,12 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+  import Header from "./components/Header.vue"
 </script>
 
 <template>
-  <h1 class="text-6xl">Hello World</h1>
+  <div class="container mx-auto mt-20 block">
+    <Header></Header>
+  </div>
+
 </template>
 
 
