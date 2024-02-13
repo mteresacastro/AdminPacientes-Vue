@@ -70,6 +70,25 @@
             
             />
             </div>
+            <div class="mb-5">
+                <label 
+                    for="sintomas"
+                    class="block traxt-gray-700 uppercase font-bold"
+                >
+                Síntomas
+            </label>
+            <textarea
+                id="sintomas"
+                placeholder="Describe los síntomas de la mascota"
+                class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:border-indigo-500 focus:outline-none h-40"
+            
+            />
+            </div>
+            <input 
+                type="submit"
+                class="bg-indigo-600 w-full p-3 uppercase text-white font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
+                value="registrar paciente"
+            />
 
 
 
