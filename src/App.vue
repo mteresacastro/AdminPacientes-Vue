@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="container mx-auto mt-20 block">
+  <div class="container mx-auto mt-20">
     <Header></Header>
     <div class="mt-12 md:flex">
       <Formulario />
