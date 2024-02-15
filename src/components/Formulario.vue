@@ -1,4 +1,19 @@
 <script setup>
+    import { reactive } from 'vue'
+
+    const paciente = reactive({
+        nombre:'',
+        propietario:'',
+        email:'',
+        alta:'',
+        sintomas:''
+    })
+
+    const validar = () => {
+        if([paciente.nombre, paciente.propietario, paciente.email].includes('')){
+            console.log('estan vacios')
+        }
+    }
 
 </script>
 
@@ -10,7 +25,10 @@
             <span class="text-indigo-600 font-bold">adminístralos</span>
         </p>
 
-        <form class="bg-white shadow-md rounded-lg py-10 px-5 mb-10" action="">
+        <form 
+            class="bg-white shadow-md rounded-lg py-10 px-5 mb-10" action=""
+            @submit.prevent="validar"
+        > <!--el .prevent (modificador de evento) es como en JS e.preventDefault()-->
             <div class="mb-5">
                 <label 
                     for="mascota"
@@ -23,7 +41,9 @@
                 id="mascota"
                 placeholder="Nombre de la mascota"
                 class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:border-indigo-500 focus:outline-none"
-            />
+                v-model="paciente.nombre"
+            /><!-- v-model es igual a   :value="nombre"
+                                        @input="(e) => nombre = e.target.value" -->
             </div>
 
             <div class="mb-5">
@@ -38,6 +58,7 @@
                 id="propietario"
                 placeholder="Nombre del propietario"
                 class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:border-indigo-500 focus:outline-none"
+                v-model="paciente.propietario"
             />
             </div>
             <div class="mb-5">
@@ -52,6 +73,7 @@
                 id="email"
                 placeholder="Email del propietario"
                 class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:border-indigo-500 focus:outline-none"
+                v-model="paciente.email"
             
             />
             </div>
@@ -67,6 +89,7 @@
                 id="alta"
                 placeholder="Fecha de alta"
                 class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:border-indigo-500 focus:outline-none"
+                v-model="paciente.alta"
             
             />
             </div>
@@ -81,7 +104,7 @@
                 id="sintomas"
                 placeholder="Describe los síntomas de la mascota"
                 class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md focus:border-indigo-500 focus:outline-none h-40"
-            
+                v-model="paciente.sintomas"
             />
             </div>
             <input 
