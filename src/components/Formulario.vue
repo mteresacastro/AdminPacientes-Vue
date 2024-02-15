@@ -1,6 +1,14 @@
 <script setup>
     import { reactive } from 'vue'
+    import Alertas from './Alertas.vue'
 
+    const alerta = reactive({
+        tipo:'',
+        mensaje:''
+    })
+
+    
+    
     const paciente = reactive({
         nombre:'',
         propietario:'',
@@ -10,8 +18,10 @@
     })
 
     const validar = () => {
-        if([paciente.nombre, paciente.propietario, paciente.email].includes('')){
-            console.log('estan vacios')
+        if(Object.values(paciente).includes('')){
+            alerta.mensaje = 'Todos los campos son obligatorios'
+            alerta.tipo = 'error'
+            return
         }
     }
 
@@ -25,6 +35,7 @@
             <span class="text-indigo-600 font-bold">adminístralos</span>
         </p>
 
+       
         <form 
             class="bg-white shadow-md rounded-lg py-10 px-5 mb-10" action=""
             @submit.prevent="validar"
@@ -112,7 +123,10 @@
                 class="bg-indigo-600 w-full p-3 uppercase text-white font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
                 value="registrar paciente"
             />
-
+            <Alertas
+            v-if="alerta.mensaje"
+            :alerta="alerta"
+        />
 
 
         </form>
