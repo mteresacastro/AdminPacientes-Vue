@@ -40,6 +40,10 @@
 
   }
 
+  const actualizarPaciente = (id) => {
+    console.log('actualizando...', id)
+  }
+
 </script>
 
 <template>
@@ -66,6 +70,7 @@
           <Paciente 
             v-for="paciente in pacientes"
             :paciente="paciente"
+            @actualizar-paciente="actualizarPaciente"
           />
         </div>
         <p v-else class="mt-20 text-2xl text-center">No Hay Pacientes</p>
