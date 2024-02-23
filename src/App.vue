@@ -41,8 +41,10 @@
   }
 
   const actualizarPaciente = (id) => {
-    console.log('actualizando...', id)
-  }
+    const pacienteEditar = pacientes.value.filter(paciente => paciente.id === id)[0]
+    Object.assign(paciente, pacienteEditar)
+  } //el [0] es para que no aparezca un array de objetos, si no el primer objeto directamente.
+  //el Object.asssign es para darle el valor a paciente del objeto con el id filtrado(para que se rellene el formulario con dicha informacion))
 
 </script>
 
