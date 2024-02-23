@@ -17,10 +17,15 @@
     })
 
   const guardarPaciente = () => {
+    if(paciente.id){
+      const { id } = paciente
+      const i = pacientes.value.findIndex((pacienteState) => pacienteState === id)
+      pacientes.value[i] = {...paciente}
+    }else{
     pacientes.value.push({
       ...paciente,
       id: uid()
-    })
+    })}
 
       //reiniciar el objeto
     paciente.nombre = ''
@@ -28,6 +33,7 @@
     paciente.email = ''
     paciente.alta = ''
     paciente.sintomas = ''
+    paciente.id = null
 
   // otra forma
   //   Object.assign(paciente, {
