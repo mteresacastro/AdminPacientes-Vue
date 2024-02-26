@@ -161,7 +161,7 @@
             <input 
                 type="submit"
                 class="bg-indigo-600 w-full p-3 uppercase text-white font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
-                :value="[ editando ? 'Guardar Cambios' : 'Registrar Paciente']"
+                :value="[editando ? 'Guardar Cambios' : 'Registrar Paciente']"
             />
             <Alertas
             v-if="alerta.mensaje"
