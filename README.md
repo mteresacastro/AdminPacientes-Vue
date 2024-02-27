@@ -1,7 +1,25 @@
-# Vue 3 + Vite
+# Administrador de Pacientes de Veterinaria
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Este proyecto es un **administrador de pacientes de veterinaria** creado con **Vue.js**. Permite a los usuarios registrar y gestionar la información de los pacientes, como su nombre, propietario, correo electrónico, fecha de alta y síntomas.
 
-## Recommended IDE Setup
+## Funcionalidades
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Agregar nuevos pacientes con sus datos completos.
+- Editar la información de los pacientes existentes.
+- Almacenar los datos localmente utilizando **localStorage**.
+- Visualizar la lista de pacientes registrados.
+
+## Tecnologías Utilizadas
+
+- **Vue.js**: Framework de JavaScript para construir interfaces de usuario.
+- **Tailwind c**:
+- **localStorage**: Almacenamiento local en el navegador para persistir los datos de los pacientes.
+
+## Contribución
+
+Si deseas contribuir a este proyecto, ¡serás bienvenido! Puedes abrir un **pull request** con tus mejoras o correcciones.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
