@@ -12,14 +12,11 @@ Este proyecto es un **administrador de pacientes de veterinaria** creado con **V
 ## Tecnologías Utilizadas
 
 - **Vue.js**: Framework de JavaScript para construir interfaces de usuario.
-- **Tailwind c**:
+- **Tailwind CSS**: Framework CSS que prioriza las utilidades.
 - **localStorage**: Almacenamiento local en el navegador para persistir los datos de los pacientes.
 
 ## Contribución
 
 Si deseas contribuir a este proyecto, ¡serás bienvenido! Puedes abrir un **pull request** con tus mejoras o correcciones.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
